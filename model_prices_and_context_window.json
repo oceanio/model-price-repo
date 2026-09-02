@@ -169,6 +169,47 @@
     "thinking_always_on": true,
     "tool_use_system_prompt_tokens": 346
   },
+  "claude-fable-5-1": {
+    "cache_creation_input_token_cost": 1.25e-05,
+    "cache_creation_input_token_cost_above_1hr": 2e-05,
+    "cache_read_input_token_cost": 2.5e-07,
+    "deprecation_date": "2027-09-01",
+    "input_cost_per_token": 1e-05,
+    "litellm_provider": "anthropic",
+    "max_input_tokens": 1000000,
+    "max_output_tokens": 128000,
+    "max_tokens": 128000,
+    "mode": "chat",
+    "output_cost_per_token": 5e-05,
+    "prompt_cache_min_tokens": 512,
+    "provider_specific_entry": {
+      "us": 1.1
+    },
+    "search_context_cost_per_query": {
+      "search_context_size_high": 0.01,
+      "search_context_size_low": 0.01,
+      "search_context_size_medium": 0.01
+    },
+    "source": "https://platform.claude.com/docs/en/models/fable-5-1/overview",
+    "supports_adaptive_thinking": true,
+    "supports_assistant_prefill": false,
+    "supports_computer_use": true,
+    "supports_forced_tool_use": false,
+    "supports_function_calling": true,
+    "supports_max_reasoning_effort": true,
+    "supports_mid_conversation_system": true,
+    "supports_native_structured_output": true,
+    "supports_output_config": true,
+    "supports_pdf_input": true,
+    "supports_prompt_caching": true,
+    "supports_reasoning": true,
+    "supports_response_schema": true,
+    "supports_sampling_params": false,
+    "supports_tool_choice": true,
+    "supports_vision": true,
+    "supports_xhigh_reasoning_effort": true,
+    "thinking_always_on": true
+  },
   "claude-haiku-4-5": {
     "cache_creation_input_token_cost": 1.25e-06,
     "cache_creation_input_token_cost_above_1hr": 2e-06,
@@ -238,7 +279,7 @@
       "search_context_size_low": 0.01,
       "search_context_size_medium": 0.01
     },
-    "source": "https://docs.claude.com/en/docs/about-claude/models/overview",
+    "source": "https://platform.claude.com/docs/en/about-claude/models/overview",
     "supports_adaptive_thinking": true,
     "supports_assistant_prefill": false,
     "supports_computer_use": true,
@@ -279,7 +320,7 @@
       "search_context_size_low": 0.01,
       "search_context_size_medium": 0.01
     },
-    "source": "https://docs.claude.com/en/docs/about-claude/models/overview",
+    "source": "https://platform.claude.com/docs/en/about-claude/models/overview",
     "supports_adaptive_thinking": true,
     "supports_assistant_prefill": false,
     "supports_computer_use": true,
@@ -1769,7 +1810,7 @@
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
     },
-    "source": "https://ai.google.dev/pricing/gemini-3",
+    "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
       "/v1/chat/completions",
       "/v1/completions",
@@ -1820,7 +1861,7 @@
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
     },
-    "source": "https://ai.google.dev/pricing/gemini-3",
+    "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
       "/v1/chat/completions",
       "/v1/completions",
@@ -2499,7 +2540,7 @@
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
     },
-    "source": "https://ai.google.dev/pricing/gemini-3",
+    "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
       "/v1/chat/completions",
       "/v1/completions",
@@ -2613,7 +2654,7 @@
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
     },
-    "source": "https://ai.google.dev/pricing/gemini-3",
+    "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
       "/v1/chat/completions",
       "/v1/completions",
@@ -2670,7 +2711,7 @@
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
     },
-    "source": "https://ai.google.dev/pricing/gemini-3",
+    "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
       "/v1/chat/completions",
       "/v1/completions",
@@ -2896,6 +2937,7 @@
     "tpm": 250000
   },
   "gemini-live-2.5-flash-native-audio": {
+    "deprecation_date": "2026-12-13",
     "gemini_native_audio": true,
     "input_cost_per_audio_token": 3e-06,
     "input_cost_per_token": 5e-07,
@@ -3650,7 +3692,7 @@
     "supports_vision": true
   },
   "gpt-4o-audio-preview": {
-    "deprecation_date": "2027-01-20",
+    "deprecation_date": "2026-05-07",
     "input_cost_per_audio_token": 4e-05,
     "input_cost_per_token": 2.5e-06,
     "litellm_provider": "openai",
@@ -3755,7 +3797,7 @@
     "supports_vision": true
   },
   "gpt-4o-mini-audio-preview": {
-    "deprecation_date": "2027-01-20",
+    "deprecation_date": "2026-05-07",
     "input_cost_per_audio_token": 1e-05,
     "input_cost_per_token": 1.5e-07,
     "litellm_provider": "openai",
@@ -3793,7 +3835,7 @@
   "gpt-4o-mini-realtime-preview": {
     "cache_creation_input_audio_token_cost": 3e-07,
     "cache_read_input_token_cost": 3e-07,
-    "deprecation_date": "2027-01-20",
+    "deprecation_date": "2026-05-07",
     "input_cost_per_audio_token": 1e-05,
     "input_cost_per_token": 6e-07,
     "litellm_provider": "openai",
@@ -3883,6 +3925,7 @@
     "supports_vision": true
   },
   "gpt-4o-mini-transcribe": {
+    "deprecation_date": "2027-02-26",
     "input_cost_per_audio_token": 1.25e-06,
     "input_cost_per_token": 1.25e-06,
     "litellm_provider": "openai",
@@ -3976,7 +4019,7 @@
   },
   "gpt-4o-realtime-preview": {
     "cache_read_input_token_cost": 2.5e-06,
-    "deprecation_date": "2027-01-20",
+    "deprecation_date": "2026-05-07",
     "input_cost_per_audio_token": 4e-05,
     "input_cost_per_token": 5e-06,
     "litellm_provider": "openai",
@@ -3995,7 +4038,7 @@
   },
   "gpt-4o-realtime-preview-2024-12-17": {
     "cache_read_input_token_cost": 2.5e-06,
-    "deprecation_date": "2027-01-20",
+    "deprecation_date": "2026-05-07",
     "input_cost_per_audio_token": 4e-05,
     "input_cost_per_token": 5e-06,
     "litellm_provider": "openai",
@@ -4014,7 +4057,7 @@
   },
   "gpt-4o-realtime-preview-2025-06-03": {
     "cache_read_input_token_cost": 2.5e-06,
-    "deprecation_date": "2027-01-20",
+    "deprecation_date": "2026-05-07",
     "input_cost_per_audio_token": 4e-05,
     "input_cost_per_token": 5e-06,
     "litellm_provider": "openai",
@@ -4084,6 +4127,7 @@
     "supports_vision": true
   },
   "gpt-4o-transcribe": {
+    "deprecation_date": "2027-02-26",
     "input_cost_per_audio_token": 2.5e-06,
     "input_cost_per_token": 2.5e-06,
     "litellm_provider": "openai",
@@ -4096,6 +4140,7 @@
     ]
   },
   "gpt-4o-transcribe-diarize": {
+    "deprecation_date": "2027-02-26",
     "input_cost_per_audio_token": 2.5e-06,
     "input_cost_per_token": 2.5e-06,
     "litellm_provider": "openai",
@@ -5965,7 +6010,7 @@
     "mode": "chat",
     "output_cost_per_token": 7.5e-05,
     "output_cost_per_token_above_272k_tokens": 0.0001125,
-    "source": "https://platform.openai.com/docs/models/gpt-5.6-cyber",
+    "source": "https://developers.openai.com/api/docs/models/gpt-5.6-cyber",
     "supported_endpoints": [
       "/v1/chat/completions",
       "/v1/responses"
@@ -6488,7 +6533,7 @@
     "input_cost_per_second": 0.0002833333333333333,
     "litellm_provider": "openai",
     "mode": "audio_transcription",
-    "source": "https://platform.openai.com/docs/models/gpt-live-transcribe",
+    "source": "https://developers.openai.com/api/docs/models/gpt-live-transcribe",
     "supported_endpoints": [
       "/v1/realtime",
       "/v1/realtime/transcription_sessions"
@@ -6809,7 +6854,7 @@
     "max_output_tokens": 2000,
     "max_tokens": 2000,
     "mode": "realtime",
-    "source": "https://platform.openai.com/docs/models/gpt-realtime-translate",
+    "source": "https://developers.openai.com/api/docs/models/gpt-realtime-translate",
     "supported_modalities": [
       "audio"
     ],
@@ -6824,7 +6869,7 @@
     "input_cost_per_second": 0.0002833333333333333,
     "litellm_provider": "openai",
     "mode": "audio_transcription",
-    "source": "https://platform.openai.com/docs/models/gpt-realtime-whisper",
+    "source": "https://developers.openai.com/api/docs/models/gpt-realtime-whisper",
     "supported_endpoints": [
       "/v1/realtime",
       "/v1/realtime/transcription_sessions"
@@ -6841,7 +6886,7 @@
     "input_cost_per_second": 7.5e-05,
     "litellm_provider": "openai",
     "mode": "audio_transcription",
-    "source": "https://platform.openai.com/docs/models/gpt-transcribe",
+    "source": "https://developers.openai.com/api/docs/models/gpt-transcribe",
     "supported_endpoints": [
       "/v1/audio/transcriptions",
       "/v1/realtime/transcription_sessions"
