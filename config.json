@@ -12,7 +12,8 @@
     "o3-",
     "o3",
     "o4-",
-    "deepseek-"
+    "deepseek-",
+    "meta/muse-"
   ],
   "exclude_patterns": [
     "sample_spec"
