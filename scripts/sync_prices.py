@@ -112,21 +112,48 @@ def fetch_upstream(url: str) -> dict:
 
 
 def filter_upstream(data: dict, config: dict) -> dict:
-    """Apply prefix_filters and exclude_patterns to upstream data."""
+    """Apply prefix_filters and exclude_patterns to upstream data.
+
+    strip_prefixes maps a provider prefix (e.g. "gemini/") to the model-name
+    prefixes to take from it (e.g. ["gemini-"]); matching keys are added under
+    their stripped name. An unprefixed upstream key always wins over a stripped
+    one, so prefixed entries only fill models upstream lists without a bare key.
+    When several providers yield the same name, the earlier one in strip_prefixes wins.
+    """
     prefixes = tuple(config.get("prefix_filters", []))
     excludes = config.get("exclude_patterns", [])
+    strip_prefixes = config.get("strip_prefixes", {})
 
-    filtered = {}
-    for key, value in data.items():
-        # Exclude first
-        if any(pat in key for pat in excludes):
-            continue
-        # Then check prefix match
-        if prefixes and not key.startswith(prefixes):
-            continue
-        filtered[key] = value
+    def excluded(key: str) -> bool:
+        return any(pat in key for pat in excludes)
 
-    log.info("Filtered to %d models (from %d upstream).", len(filtered), len(data))
+    filtered = {
+        key: value
+        for key, value in data.items()
+        if not excluded(key) and (not prefixes or key.startswith(prefixes))
+    }
+
+    stripped_count = 0
+    for sp, name_prefixes in strip_prefixes.items():
+        name_prefixes = tuple(name_prefixes)
+        for key, value in data.items():
+            if not key.startswith(sp):
+                continue
+            bare = key[len(sp):]
+            if not bare.startswith(name_prefixes) or excluded(bare):
+                continue
+            if bare in data or bare in filtered:
+                continue
+            filtered[bare] = value
+            stripped_count += 1
+            log.info("Stripped prefix: '%s' -> '%s'", key, bare)
+
+    log.info(
+        "Filtered to %d models (%d from stripped prefixes, from %d upstream).",
+        len(filtered),
+        stripped_count,
+        len(data),
+    )
     return filtered
 
 

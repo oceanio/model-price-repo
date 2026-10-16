@@ -25,6 +25,7 @@ All settings live in [`config.json`](config.json):
 | `update_existing` | Whether to update pricing data for models already in the output |
 | `prefix_filters` | List of prefixes — a model key must start with one to be included |
 | `exclude_patterns` | Substring patterns to exclude (applied before prefix matching) |
+| `strip_prefixes` | Map of provider prefix → model-name prefixes, e.g. `{"gemini/": ["gemini-"]}`. Matching upstream keys are added with the provider prefix stripped, only when upstream has no unprefixed key of the same name; earlier providers win on conflicts |
 | `aliases` | Map alias model keys to existing source models (deep copy pricing) |
 | `custom_models` | Manually defined pricing objects, always injected |
 

@@ -12,9 +12,13 @@
     "o3-",
     "o3",
     "o4-",
-    "deepseek-",
-    "meta/muse-"
+    "deepseek-"
   ],
+  "strip_prefixes": {
+    "gemini/": ["gemini-"],
+    "vertex_ai/": ["gemini-"],
+    "meta/": ["muse-"]
+  },
   "exclude_patterns": [
     "sample_spec"
   ],
