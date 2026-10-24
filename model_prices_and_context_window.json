@@ -8755,6 +8755,32 @@
     "supports_video_input": true,
     "supports_vision": true
   },
+  "kimi-k3.1-pro-highspeed": {
+    "cache_creation_input_token_cost": 4e-06,
+    "cache_creation_input_token_cost_above_1hr": 8e-06,
+    "cache_read_input_token_cost": 2e-07,
+    "input_cost_per_token": 4e-06,
+    "litellm_provider": "moonshot",
+    "max_input_tokens": 1048576,
+    "max_output_tokens": 1048576,
+    "max_tokens": 1048576,
+    "mode": "chat",
+    "output_cost_per_token": 2e-05,
+    "reasoning_effort_levels": [
+      "low",
+      "high",
+      "max"
+    ],
+    "source": "https://platform.kimi.ai/docs/pricing/chat",
+    "supports_function_calling": true,
+    "supports_prompt_caching": true,
+    "supports_reasoning": true,
+    "supports_response_schema": true,
+    "supports_sampling_params": false,
+    "supports_tool_choice": true,
+    "supports_video_input": true,
+    "supports_vision": true
+  },
   "minimax-m2.7": {
     "cache_creation_input_token_cost": 3.75e-07,
     "cache_read_input_token_cost": 6e-08,
